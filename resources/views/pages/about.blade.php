@@ -17,5 +17,5 @@
     </ul>
 @endif --}}
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Chocolate brownie cake danish croissant. Cheesecake cake gingerbread chocolate bar chocolate cake chocolate cake macaroon. Candy caramels cake ice cream wafer liquorice carrot cake. Bear claw jelly beans bonbon cotton candy liquorice jelly chupa chups marshmallow biscuit. Oat cake croissant wafer jelly beans sesame snaps caramels. Donut tootsie roll dragée sweet roll chocolate sweet lollipop.</p>
 @stop
