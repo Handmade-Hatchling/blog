@@ -1,9 +1,13 @@
 @extends('app')
 
+@section('body-class')
+<body class="contact">
+@stop
+
 @section('content')
-<h1>Contact Me!</h1>
+<h2>Contact Me!</h2>
 @stop
 
 @section('footer')
-<script>alert('Contact Form Scripts');</script>
+{{-- <script>alert('Contact Form Scripts');</script> --}}
 @stop

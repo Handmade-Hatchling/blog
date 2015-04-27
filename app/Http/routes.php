@@ -17,6 +17,8 @@ Route::get('home', 'HomeController@index');
 Route::get('about', 'PagesController@about');
 Route::get('contact', 'PagesController@contact');
 
+Route::get('gallery', 'PagesController@gallery');
+
 Route::resource('articles', 'ArticlesController');
 
 Route::get('tags/{tags}', 'TagsController@show');

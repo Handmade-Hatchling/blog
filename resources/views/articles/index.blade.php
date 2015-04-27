@@ -1,6 +1,11 @@
 @extends('app')
+
+@section('body-class')
+<body class="articles">
+@stop
+
 @section('content')
-    <h1>Articles</h1>
+    <h2>Articles</h2>
     <hr>
     @foreach ($articles as $article)
         <article>

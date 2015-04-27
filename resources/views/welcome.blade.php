@@ -1,48 +1,37 @@
-<html>
-	<head>
-		<title>Laravel</title>
+@extends('app')
 
-		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+@section('body-class')
+<body class="home">
+@stop
 
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				height: 100%;
-				color: #B0BEC5;
-				display: table;
-				font-weight: 100;
-				font-family: 'Lato';
-			}
+@section('content')
 
-			.container {
-				text-align: center;
-				display: table-cell;
-				vertical-align: middle;
-			}
+<p class="site__intro">
+    Here at Handmade Hatchling you'll find DIYs, tutorials and recipes. Everything is added to my <a href="https://www.etsy.com/">Etsy shop</a> regularly. Check it out.
+</p>
 
-			.content {
-				text-align: center;
-				display: inline-block;
-			}
+<div class="cta">
+    <div class="cta__item">
+        <img src="http://www.feastsfromthepantry.com/wordpress/wp-content/uploads/2011/08/cooking_classes.jpg" alt="Cooking" />
+        <h3>Cooking</h3>
+        <p>
+            Gummies cake sweet roll marshmallow marshmallow sugar plum. Candy canes chocolate brownie powder. Jujubes icing pastry. Ice cream icing chocolate cake.
+        </p>
+    </div>
+    <div class="cta__item">
+        <img src="http://www.fallcreekgardens.org/wp-content/uploads/2014/04/gardening-van-houtte-coffee_emag_article_large.jpg" alt="Gardening" />
+        <h3>Gardening</h3>
+        <p>
+            Macaroon tootsie roll cake. Lemon drops apple pie lollipop chocolate. Biscuit marshmallow cupcake croissant brownie soufflé. Cake marzipan tiramisu oat cake dragée.
+        </p>
+    </div>
+    <div class="cta__item">
+        <img src="http://www.gurukoala.com/wp-content/uploads/2014/09/DIY%20Vintage%20Bridesmaids%20-12.jpg" alt="DIY" />
+        <h3>DIY</h3>
+        <p>
+            Icing fruitcake liquorice toffee. Sesame snaps jelly-o fruitcake bonbon. Halvah chocolate bar cake.
+        </p>
+    </div>
+</div>
 
-			.title {
-				font-size: 96px;
-				margin-bottom: 40px;
-			}
-
-			.quote {
-				font-size: 24px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
-			</div>
-		</div>
-	</body>
-</html>
+@endsection

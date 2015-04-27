@@ -26,4 +26,9 @@ class PagesController extends Controller
     {
         return view('pages.contact');
     }
+
+    public function gallery()
+    {
+        return view('pages.gallery');
+    }
 }

@@ -17,17 +17,25 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body>
+@yield('body-class')
+	<div class="wrapper">
+		<header>
+		    <div class="site__branding">
+		        <h1><a href="/">Handmade Hatchling</a></h1>
+		        <h2>Where <em>handmade</em> is always better!</h2>
+		    </div>
+		    @include('partials._nav')
+		</header>
 
-    @include('partials._nav')
+		<main role="main" class="home main">
+	        @include('flash::message')
+	        {{--@include('partials.flash')--}}
 
-	<div class="container">
-        @include('flash::message')
-        {{--@include('partials.flash')--}}
+			@yield('content')
+		</main>
+	</div> <!-- /.wrapper -->
 
-		@yield('content')
-	</div>
-
+	<footer>&copy; Jennifer Parker 2015</footer>
 	<!-- Scripts -->
 	<script src="/js/main.js"></script>
 
