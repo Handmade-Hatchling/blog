@@ -150,7 +150,9 @@ return [
         'Jenssegers\Mongodb\MongodbServiceProvider',
         'Jenssegers\Mongodb\Auth\PasswordResetServiceProvider',
 
-        'Laracasts\Flash\FlashServiceProvider'
+        'Laracasts\Flash\FlashServiceProvider',
+        'Laracasts\Generators\GeneratorsServiceProvider'
+
     ],
 
     /*

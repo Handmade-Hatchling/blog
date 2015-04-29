@@ -65,13 +65,13 @@ class Article extends Model
     }
 
     /**
-     * An article is owned by a user
+     * An article is owned by a staff member
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function user()
+    public function staff()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\Staff');
     }
 
     /**
