@@ -12,9 +12,14 @@ class RenameUserIdOnArticlesTable extends Migration {
 	 */
 	public function up()
 	{
-        Schema::table('articles', function($table)
+        Schema::table('articles', function(Blueprint $table)
         {
-            $table->renameColumn('user_id', 'staff_id');
+            $table->dropForeign('articles_user_id_foreign');
+            $table->integer('staff_id')->unsigned();
+            $table->foreign('staff_id')
+                  ->references('id')
+                  ->on('staff')
+                  ->onDelete('cascade');
         });
 	}
 
@@ -25,9 +30,13 @@ class RenameUserIdOnArticlesTable extends Migration {
 	 */
 	public function down()
 	{
-        Schema::table('articles', function($table)
+        Schema::table('articles', function(Blueprint $table)
         {
-            $table->renameColumn('staff_id', 'user_id');
+            $table->dropForeign('articles_staff_id_foreign');
+            $table->foreign('user_id')
+                  ->references('id')
+                  ->on('users')
+                  ->onDelete('cascade');
         });
 	}
 
