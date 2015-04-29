@@ -152,7 +152,6 @@ return [
 
         'Laracasts\Flash\FlashServiceProvider',
         'Laracasts\Generators\GeneratorsServiceProvider'
-
     ],
 
     /*
