@@ -27,7 +27,7 @@ class Staff extends Model implements AuthenticatableContract, CanResetPasswordCo
         'last_name',
         'email',
         'password',
-        'access_level'
+        'role_id'
     ];
 
     /**
@@ -48,5 +48,15 @@ class Staff extends Model implements AuthenticatableContract, CanResetPasswordCo
     public function articles()
     {
         return $this->hasMany('App\Article');
+    }
+
+    /**
+     * A staff member has one role.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function role()
+    {
+        return $this->hasOne('App\Role');
     }
 }
