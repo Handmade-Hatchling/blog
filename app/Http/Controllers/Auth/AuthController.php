@@ -5,6 +5,10 @@ use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
+/**
+ * Class AuthController
+ * @package App\Http\Controllers\Auth
+ */
 class AuthController extends Controller
 {
     /*
@@ -20,7 +24,7 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers;
 
-    protected $redirectTo = '/';
+    protected $redirectTo = '/admin';
 
     /**
     * Create a new authentication controller instance.
@@ -34,6 +38,18 @@ class AuthController extends Controller
         $this->auth = $auth;
         $this->registrar = $registrar;
 
-        $this->middleware('guest', ['except' => 'getLogout']);
+        $this->middleware('auth', [
+            'only' => [
+                'getRegister',
+                'postRegister'
+            ]
+        ]);
+        $this->middleware('guest', [
+            'except' => [
+                'getLogout',
+                'getRegister',
+                'postRegister'
+            ]
+        ]);
     }
 }

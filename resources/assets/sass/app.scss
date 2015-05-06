@@ -1,11 +1,13 @@
 @import 'normalize';
+@import 'fonts';
+
 $color1: #828993;
 $color2: #FBB381;
 $color3: #BAB1C2;
 $color4: #A7BFAA;
 
 * {
-    font-family: 'Ubuntu', sans-serif;;
+    font-family: 'Roboto', sans-serif;
     color: $color1;
     margin: 0;
     padding: 0;
@@ -21,15 +23,26 @@ a {
     color: $color2;
 }
 .wrapper {
-    max-width: 64rem;
+    max-width: 75rem;
     margin: auto;
 }
 .site__branding {
     margin-bottom: 1em;
     padding-top: 1em;
     text-align: center;
+    h1 {
+        margin-bottom: 0;
+    }
+    h2 {
+        margin-top: -1rem;
+    }
     a {
+        font-family: 'Great Vibes', cursive;
+        color: $color4;
+        font-size: 6rem;
         text-decoration: none;
+        text-transform: none;
+        font-weight: normal;
     }
     img {
         max-width: 25em;
@@ -106,8 +119,6 @@ a {
         margin-top: 2em;
     }
     .cta__item {
-        display: flex;
-        flex-direction: column;
         margin: 1em 0.5em;
         width: 15em;
         &:first-child {

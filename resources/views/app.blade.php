@@ -7,8 +7,7 @@
 	<title>Handmade Hatchling</title>
 	<link href="{{ elixir('css/style.css') }}" rel="stylesheet">
 
-	<!-- Fonts -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    @yield('ex-styles')
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,13 +20,13 @@
 	<div class="wrapper">
 		<header>
 		    <div class="site__branding">
-		        <h1><a href="/">Handmade Hatchling</a></h1>
+		        <h1>{!! link_to_action('PagesController@welcome', "Handmade Hatchling") !!}</h1>
 		        <h2>Where <em>handmade</em> is always better!</h2>
 		    </div>
 		    @include('partials._nav')
 		</header>
 
-		<main role="main" class="home main">
+		<main role="main" class="main">
 	        @include('flash::message')
 	        {{--@include('partials.flash')--}}
 

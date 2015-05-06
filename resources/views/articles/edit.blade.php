@@ -1,5 +1,9 @@
 @extends('app')
 
+@section('body-class')
+    <body class="articles">
+@stop
+
 @section('content')
     <h1>Edit: {!! $article->title !!}</h1>
     {!! Form::model($article, ['method' => 'PATCH', 'action' => ['ArticlesController@update', $article->id]]) !!}

@@ -5,7 +5,9 @@
 @stop
 
 @section('content')
-<h2>Contact Me!</h2>
+<h2>Contact Us!</h2>
+
+{{--{!! Form::open(['route' => ]) !!}--}}
 @stop
 
 @section('footer')

@@ -31,7 +31,8 @@ class Registrar implements RegistrarContract
         public function create(array $data)
         {
             return Staff::create([
-                'name' => $data['name'],
+                'first_name' => $data['first_name'],
+                'last_name' => $data['last_name'],
                 'email' => $data['email'],
                 'password' => bcrypt($data['password']),
             ]);

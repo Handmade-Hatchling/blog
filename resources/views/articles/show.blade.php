@@ -1,5 +1,9 @@
 @extends('app')
 
+@section('body-class')
+    <body class="articles">
+@stop
+
 @section('content')
     <h1>{{ $article->title }}</h1>
     <hr>

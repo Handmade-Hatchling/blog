@@ -55,9 +55,9 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        $tags = Tag::lists('name', 'id');
-
-        return view('articles.create')->with('tags', $tags);
+//        $tags = Tag::lists('name', 'id');
+//        ->with('tags', $tags)
+        return view('articles.create');
     }
 
     /**
@@ -83,11 +83,11 @@ class ArticlesController extends Controller
      */
     public function edit(Article $article)
     {
-        $tags = Tag::lists('name', 'id');
+//        $tags = Tag::lists('name', 'id');
 
         return view('articles.edit')->with([
-            'article' => $article,
-            'tags'    => $tags
+            'article' => $article
+//            'tags'    => $tags
         ]);
     }
 

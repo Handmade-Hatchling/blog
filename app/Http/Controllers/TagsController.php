@@ -15,5 +15,4 @@ class TagsController extends Controller
 
         return view('articles.index')->with('articles', $articles);
     }
-
 }

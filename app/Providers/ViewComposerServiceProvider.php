@@ -1,6 +1,7 @@
 <?php namespace App\Providers;
 
 use App\Article;
+use App\Tag;
 use Illuminate\Support\ServiceProvider;
 
 class ViewComposerServiceProvider extends ServiceProvider {
@@ -13,6 +14,8 @@ class ViewComposerServiceProvider extends ServiceProvider {
 	public function boot()
 	{
         $this->composeNavigation();
+
+        $this->composeTags();
     }
 
 	/**
@@ -31,6 +34,17 @@ class ViewComposerServiceProvider extends ServiceProvider {
     {
         view()->composer('partials._nav', function ($view) {
             $view->with('latest', Article::latest()->first());
+        });
+    }
+
+    /**
+     * Compose the tags for create and edit views.
+     */
+    private function composeTags()
+    {
+        view()->composer(['articles.create', 'articles.edit'], function ($view) {
+            $tags = Tag::lists('name', 'id');
+            $view->with('tags', $tags);
         });
     }
 

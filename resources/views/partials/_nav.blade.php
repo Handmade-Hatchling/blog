@@ -1,6 +1,6 @@
 <nav role="navigation" class="site__nav">
-    <span class="nav__tab"><a class="nav__link" href="{{ url('/articles') }}">Articles</a></span> <!-- /.nav__link -->
-    <span class="nav__tab"><a class="nav__link" href="{{ url('/gallery') }}">Gallery</a></span> <!-- /.nav__link -->
-    <span class="nav__tab"><a class="nav__link" href="{{ url('/about') }}">About Me</a></span> <!-- /.nav__link -->
-    <span class="nav__tab"><a class="nav__link" href="{{ url('/contact') }}">Contact</a></span> <!-- /.nav__link -->
+    <span class="nav__tab">{!! link_to_action('ArticlesController@index', 'Articles', [], ['class' => 'nav__link']) !!}</span> <!-- /.nav__link -->
+    <span class="nav__tab">{!! link_to_action('PagesController@gallery', 'Gallery', [], ['class' => 'nav__link']) !!}</span> <!-- /.nav__link -->
+    <span class="nav__tab">{!! link_to_action('PagesController@about', 'About', [], ['class' => 'nav__link']) !!}</span> <!-- /.nav__link -->
+    <span class="nav__tab">{!! link_to_action('PagesController@createContact', 'Contact', [], ['class' => 'nav__link']) !!}</span> <!-- /.nav__link -->
 </nav> <!-- /.site__nav -->
