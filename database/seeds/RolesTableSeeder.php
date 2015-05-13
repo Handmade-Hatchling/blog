@@ -8,9 +8,9 @@ class RolesTableSeeder extends Seeder {
 
     public function run()
     {
-        TestDummy::create('App\Role', ['role' => 'author']);
-        TestDummy::create('App\Role', ['role' => 'editor']);
-        TestDummy::create('App\Role', ['role' => 'admin']);
+        TestDummy::create('App\Role', ['name' => 'author']);
+        TestDummy::create('App\Role', ['name' => 'editor']);
+        TestDummy::create('App\Role', ['name' => 'admin']);
     }
 
 }

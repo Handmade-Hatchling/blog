@@ -11,7 +11,7 @@ class Role extends Model
      * @var array
      */
     protected $fillable = [
-        'role'
+        'name'
     ];
 
     /**
@@ -21,6 +21,6 @@ class Role extends Model
      */
     public function staff()
     {
-        return $this->belongsToMany('App\Staff');
+        return $this->hasMany('App\Staff');
     }
 }

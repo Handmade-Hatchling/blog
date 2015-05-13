@@ -1,7 +1,7 @@
 <?php
 
 $factory('App\Role', [
-    'role' => null
+    'name' => null
 ]);
 
 $factory('App\Staff', [

@@ -8,6 +8,7 @@
     {{--<link href="{{ elixir('css/style.css') }}" rel="stylesheet">--}}
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
     @yield('ex-styles')
     @include('partials._adminStyle')
 
@@ -27,6 +28,9 @@
     <main role="main" class="container-fluid">
         <div class="row">
             @include('partials._adminSidebar')
+
+            @include('flash::message')
+
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 @yield('content')
             </div>

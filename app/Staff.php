@@ -57,6 +57,6 @@ class Staff extends Model implements AuthenticatableContract, CanResetPasswordCo
      */
     public function role()
     {
-        return $this->hasOne('App\Role');
+        return $this->belongsTo('App\Role');
     }
 }

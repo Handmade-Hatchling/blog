@@ -1,4 +1,4 @@
-@extends('app')
+@extends('admin')
 
 @section('body-class')
     <body class="articles">

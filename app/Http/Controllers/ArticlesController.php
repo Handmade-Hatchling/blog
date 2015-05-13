@@ -55,8 +55,6 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-//        $tags = Tag::lists('name', 'id');
-//        ->with('tags', $tags)
         return view('articles.create');
     }
 
@@ -83,12 +81,7 @@ class ArticlesController extends Controller
      */
     public function edit(Article $article)
     {
-//        $tags = Tag::lists('name', 'id');
-
-        return view('articles.edit')->with([
-            'article' => $article
-//            'tags'    => $tags
-        ]);
+        return view('articles.edit')->with('article', $article);
     }
 
     /**
@@ -104,7 +97,7 @@ class ArticlesController extends Controller
 
         $this->syncTags($article, $request->input('tag_list'));
 
-        return redirect('articles');
+        return redirect('admin/articles');
     }
 
     /**

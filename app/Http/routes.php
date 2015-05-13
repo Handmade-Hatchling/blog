@@ -23,6 +23,7 @@ Route::resource('articles', 'ArticlesController');
 
 Route::get('admin', 'AdminController@index');
 Route::get('admin/staff', 'AdminController@staff');
+Route::get('admin/articles', 'AdminController@articles');
 
 Route::get('tags/{tags}', 'TagsController@show');
 

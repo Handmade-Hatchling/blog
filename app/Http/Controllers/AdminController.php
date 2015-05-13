@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Staff;
+use App\Article;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller {
@@ -31,5 +32,12 @@ class AdminController extends Controller {
         $staff = Staff::all();
 
         return view('admin.staff')->with('staff', $staff);
+    }
+
+    public function articles()
+    {
+        $articles = Article::all();
+
+        return view('admin.articles')->with('articles', $articles);
     }
 }

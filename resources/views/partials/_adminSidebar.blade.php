@@ -1,8 +1,7 @@
 <div class="col-sm-3 col-md-2 sidebar">
     <ul class="nav nav-sidebar">
         <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Tags</a></li>
+        <li>{!! link_to_action('AdminController@articles', 'Articles') !!}</li>
         <li>{!! link_to_action('AdminController@staff', 'Staff') !!}</li>
     </ul>
     <ul class="nav nav-sidebar">
