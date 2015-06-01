@@ -147,8 +147,6 @@ return [
         'App\Providers\RouteServiceProvider',
         'App\Providers\ViewComposerServiceProvider',
 
-        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
-
         'Jenssegers\Mongodb\MongodbServiceProvider',
         'Jenssegers\Mongodb\Auth\PasswordResetServiceProvider',
 

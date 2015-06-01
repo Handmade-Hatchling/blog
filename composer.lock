@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ef8622559609c3b3293e425487ad9436",
+    "hash": "829e5015809090c78067d9b6439685fb",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -2294,69 +2294,6 @@
         }
     ],
     "packages-dev": [
-        {
-            "name": "barryvdh/laravel-ide-helper",
-            "version": "v2.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "d8d5517f2cc55d534a7fc8f50ff62cb55115e1aa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/d8d5517f2cc55d534a7fc8f50ff62cb55115e1aa",
-                "reference": "d8d5517f2cc55d534a7fc8f50ff62cb55115e1aa",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/console": "5.0.x",
-                "illuminate/filesystem": "5.0.x",
-                "illuminate/support": "5.0.x",
-                "php": ">=5.4.0",
-                "phpdocumentor/reflection-docblock": "2.0.x",
-                "symfony/class-loader": "~2.3"
-            },
-            "require-dev": {
-                "doctrine/dbal": "~2.3"
-            },
-            "suggest": {
-                "doctrine/dbal": "Load information from the database about models for phpdocs (~2.3)"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Barryvdh\\LaravelIdeHelper\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Barry vd. Heuvel",
-                    "email": "barryvdh@gmail.com"
-                }
-            ],
-            "description": "Laravel IDE Helper, generates correct PHPDocs for all Facade classes, to improve auto-completion.",
-            "keywords": [
-                "autocomplete",
-                "codeintel",
-                "helper",
-                "ide",
-                "laravel",
-                "netbeans",
-                "phpdoc",
-                "phpstorm",
-                "sublime"
-            ],
-            "time": "2015-03-17 08:00:28"
-        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.4",
