@@ -16,8 +16,11 @@ class CreateArticleImagePivotTable extends Migration {
 		{
 			$table->integer('article_id')->unsigned()->index();
 			$table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
+
 			$table->integer('image_id')->unsigned()->index();
 			$table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
+
+            $table->timestamps();
 		});
 	}
 

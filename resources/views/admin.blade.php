@@ -38,6 +38,19 @@
     </main>
 </div> <!-- /.wrapper -->
 
+<!-- Username Form Input -->
+<div class="form-group">
+    {{ Form::label('username', 'Username:') }}
+    {{ Form::text('username', nulle, ['class' => 'form-control']) }}
+</div>
+
+<!-- Email Form Input -->
+<div class="form-group">
+    {{ Form::label('email', 'Email:') }}
+    {{ Form::text('email', nulle, ['class' => 'form-control']) }}
+</div>
+
+
 {{--<footer>&copy; Jennifer Parker 2015</footer>--}}
 <!-- Scripts -->
 <script src="/js/main.js"></script>
