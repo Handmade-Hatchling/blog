@@ -70,7 +70,7 @@ class ArticlesController extends Controller
 
         flash()->success('Your article has been created');
 
-        return redirect('articles');
+        return redirect('admin/articles');
     }
 
     /**

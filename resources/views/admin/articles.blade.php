@@ -7,6 +7,9 @@
 @section('content')
     <h2>Articles</h2>
     <hr>
+
+    <h3>{!! link_to_action('ArticlesController@create', 'Create A New Article', [], ['class' => 'btn btn-primary']) !!}</h3>
+
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
