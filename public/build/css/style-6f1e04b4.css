@@ -493,15 +493,15 @@ th {
 .articles__list .body {
   margin-top: 1rem; }
 
-.articles__single {
-  font-size: 0.8rem; }
-  .articles__single .body {
+.articles__single main {
+  font-size: 1.5rem; }
+  .articles__single main .body {
     margin: 1rem auto;
     padding: 2rem; }
-  .articles__single article {
+  .articles__single main article {
     max-width: 60rem;
     margin: auto; }
-  .articles__single h1 {
+  .articles__single main h1 {
     margin-bottom: 0; }
 
 .image__flex {

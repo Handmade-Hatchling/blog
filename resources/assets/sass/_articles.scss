@@ -13,20 +13,22 @@
 }
 
 .articles__single {
-    font-size: 0.8rem;
+    main {
+        font-size: 1.5rem;
 
-    .body {
-        margin: 1rem auto;
-        padding: 2rem;
-    }
+        .body {
+            margin: 1rem auto;
+            padding: 2rem;
+        }
 
-    article {
-        max-width: 60rem;
-        margin: auto;
-    }
+        article {
+            max-width: 60rem;
+            margin: auto;
+        }
 
-    h1 {
-        margin-bottom: 0;
+        h1 {
+            margin-bottom: 0;
+        }
     }
 }
 
