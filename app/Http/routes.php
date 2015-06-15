@@ -21,7 +21,7 @@ Route::post('contact',
 
 //Route::resource('articles', 'ArticlesController');
 Route::get('articles', 'ArticlesController@index');
-Route::get('articles/{articles}', 'ArticlesController@show');
+Route::get('articles/{publishedArticles}', 'ArticlesController@show');
 
 
 Route::get('admin', 'AdminController@index');
@@ -30,10 +30,10 @@ Route::get('admin/staff', 'AdminController@staff');
 Route::get('admin/articles', 'AdminController@articles');
 Route::get('admin/articles/create', 'ArticlesController@create');
 Route::post('admin/articles', 'ArticlesController@store');
-Route::get('admin/articles/{articles}/edit', 'ArticlesController@edit');
-Route::put('admin/articles/{articles}', 'ArticlesController@update');
-Route::patch('admin/articles/{articles}', 'ArticlesController@update');
-Route::delete('admin/articles/{articles}', 'ArticlesController@destroy');
+Route::get('admin/articles/{anyArticles}/edit', 'ArticlesController@edit');
+Route::put('admin/articles/{anyArticles}', 'ArticlesController@update');
+Route::patch('admin/articles/{anyArticles}', 'ArticlesController@update');
+Route::delete('admin/articles/{anyArticles}', 'ArticlesController@destroy');
 
 Route::get('admin/images', 'AdminController@images');
 Route::get('admin/images/upload', 'ImagesController@create');
