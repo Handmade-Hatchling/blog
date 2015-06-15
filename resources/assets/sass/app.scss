@@ -1,5 +1,8 @@
 @import 'normalize';
 @import 'fonts';
+@import 'articles';
+@import 'gallery';
+@import 'pages';
 
 $color1: #828993;
 $color2: #FBB381;
@@ -177,4 +180,14 @@ a {
 footer {
     padding: 1.5em;
     text-align: center;
+}
+
+.pagination {
+    text-align: center;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        padding: 1.2rem;
+    }
 }

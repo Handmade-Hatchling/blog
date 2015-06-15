@@ -1,4 +1,7 @@
 var elixir = require('laravel-elixir');
+var gulp = require('gulp');
+var bs = require('browser-sync');
+var reload = bs.reload;
 
 /*
  |--------------------------------------------------------------------------
@@ -22,8 +25,24 @@ elixir(function(mix) {
     mix.version('public/css/style.css');
 
     mix.scripts([
-        'libs/jquery.min.js',
-        'libs/bootstrap.min.js',
-        'libs/select2.min.js'
-    ], 'public/js/main.js');
+        'jquery.min.js',
+        'bootstrap.min.js',
+        'select2.min.js'
+    ], 'public/js/main.js', 'resources/js/libs/');
 });
+
+// gulp.task('browser-sync', function() {
+//     bs({
+//         proxy: handmadehatchling.dev,
+//         port: port,
+//         files: arrAddFiles,
+//         ghostMode: {
+//             clicks: true,
+//             location: true,
+//             forms: true,
+//             scroll: true
+//         },
+//         notify: false,
+//         open: false
+//     });
+// });

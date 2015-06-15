@@ -30,7 +30,11 @@ class ArticleRequest extends Request
             'published_at' => [
                 'required',
                 'date'
-            ]
+            ],
+            'tag_list' => [
+                'required'
+            ],
+//            'image_list' => 'image|mimes:png,gif,jpeg,jpg'
         ];
     }
 }

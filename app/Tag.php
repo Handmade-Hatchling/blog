@@ -23,4 +23,28 @@ class Tag extends Model {
         return $this->belongsToMany('App\Article');
     }
 
+    public function images()
+    {
+        return $this->belongsToMany('App\Image');
+    }
+
+    /**
+     * Get a list of article ids associated with the current image
+     *
+     * @return array
+     */
+    public function getArticleListAttribute()
+    {
+        return $this->articles->lists('id');
+    }
+
+    /**
+     * Get a list of image ids associated with the current image
+     *
+     * @return array
+     */
+    public function getImageListAttribute()
+    {
+        return $this->images->lists('id');
+    }
 }

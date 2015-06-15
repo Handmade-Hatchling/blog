@@ -94,4 +94,24 @@ class Article extends Model
     {
         return $this->tags->lists('id');
     }
+
+    /**
+     * Get the images associated with the given article
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function images()
+    {
+        return $this->belongsToMany('App\Image')->withTimestamps();
+    }
+
+    /**
+     * Get a list of image ids associated with the current article
+     *
+     * @return array
+     */
+    public function getImageListAttribute()
+    {
+        return $this->images->lists('id');
+    }
 }

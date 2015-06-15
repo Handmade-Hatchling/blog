@@ -5,7 +5,6 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateTagsTable extends Migration
 {
-
     /**
      * Run the migrations.
      *
@@ -40,5 +39,4 @@ class CreateTagsTable extends Migration
         Schema::drop('article_tag');
         Schema::drop('tags');
     }
-
 }

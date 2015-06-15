@@ -1,0 +1,16 @@
+.images {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    .images__item {
+        flex-shrink: 0;
+        align-self: flex-start;
+        margin: 1rem;
+        border: 2px solid darken(#EBE2B3, 20);
+
+        img {
+            display: block;
+        }
+    }
+}

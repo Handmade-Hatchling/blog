@@ -31,7 +31,7 @@ class PagesController extends Controller
 
     public function welcome()
     {
-        $images= [
+        $images = [
             'The Kitchen' => 'https://trello-backgrounds.s3.amazonaws.com/53c07d72b387d12d2b1e1de2/256x192/468016b11f75634b6f93f7700f37018e/December_2014_046.JPG.jpg',
             'The Garden' => 'https://trello-backgrounds.s3.amazonaws.com/53c07d72b387d12d2b1e1de2/256x192/23d78e1a549011976d477f0d5cb2c61e/2014-06-23.jpg',
             'The Craft Room' => 'https://trello-backgrounds.s3.amazonaws.com/53c07d72b387d12d2b1e1de2/256x192/c905fba6c7066f70a2d7eca1b422aeca/IMG_20140614_120348.jpg',
@@ -42,7 +42,8 @@ class PagesController extends Controller
 
     public function gallery()
     {
-        return view('pages.gallery');
+        $images = Image::paginate(10);
+        return view('pages.gallery')->with('images', $images);
     }
 
     public function about()

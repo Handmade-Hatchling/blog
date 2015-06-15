@@ -33,9 +33,25 @@ Route::post('admin/articles', 'ArticlesController@store');
 Route::get('admin/articles/{articles}/edit', 'ArticlesController@edit');
 Route::put('admin/articles/{articles}', 'ArticlesController@update');
 Route::patch('admin/articles/{articles}', 'ArticlesController@update');
-Route::delete('admin/articles/{articles', 'ArticlesController@destroy');
+Route::delete('admin/articles/{articles}', 'ArticlesController@destroy');
 
-Route::get('tags/{tags}', 'TagsController@show');
+Route::get('admin/images', 'AdminController@images');
+Route::get('admin/images/upload', 'ImagesController@create');
+Route::post('admin/images', 'ImagesController@store');
+Route::get('admin/images/{images}/edit', 'ImagesController@edit');
+Route::put('admin/images/{images}', 'ImagesController@update');
+Route::patch('admin/images/{images}', 'ImagesController@update');
+Route::delete('admin/images/{images}', 'ImagesController@destroy');
+
+Route::get('admin/tags', 'AdminController@tags');
+Route::get('admin/tags/create', 'TagsController@create');
+Route::post('admin/tags', 'TagsController@store');
+Route::get('admin/tags/{tagsId}/edit', 'TagsController@edit');
+Route::put('admin/tags/{tagsId}', 'TagsController@update');
+Route::patch('admin/tags/{tagsId}', 'TagsController@update');
+Route::delete('admin/tags/{tagsId}', 'TagsController@destroy');
+
+Route::get('tags/{tagsName}', 'TagsController@show');
 
 Route::controllers([
     'auth' => 'Auth\AuthController',

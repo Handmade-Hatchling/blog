@@ -7,7 +7,7 @@
 @section('content')
     <h1 class="page-header">Dashboard</h1>
 
-    <div class="row placeholders">
+    {{-- <div class="row placeholders">
         @for($i = 0; $i < 2; $i++)
         <div class="col-xs-6 col-sm-3 placeholder">
             <img src="http://placehold.it/200/0D8FDB/FFFFFF" class="img-responsive" alt="Generic placeholder thumbnail">
@@ -20,9 +20,9 @@
             <span class="text-muted">Something else</span>
         </div>
         @endfor
-    </div>
+    </div> --}}
 
-    <h2 class="sub-header">Section title</h2>
+    {{-- <h2 class="sub-header">Section title</h2>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -46,5 +46,5 @@
             @endfor
             </tbody>
         </table>
-    </div>
+    </div> --}}
 @stop

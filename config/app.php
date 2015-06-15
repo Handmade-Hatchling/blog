@@ -147,10 +147,9 @@ return [
         'App\Providers\RouteServiceProvider',
         'App\Providers\ViewComposerServiceProvider',
 
-        'Jenssegers\Mongodb\MongodbServiceProvider',
-        'Jenssegers\Mongodb\Auth\PasswordResetServiceProvider',
+        'Laracasts\Flash\FlashServiceProvider',
 
-        'Laracasts\Flash\FlashServiceProvider'
+        'Intervention\Image\ImageServiceProvider'
     ],
 
     /*
@@ -198,10 +197,10 @@ return [
         'URL'       => 'Illuminate\Support\Facades\URL',
         'Validator' => 'Illuminate\Support\Facades\Validator',
         'View'      => 'Illuminate\Support\Facades\View',
-        'Moloquent' => 'Jenssegers\Mongodb\Model',
         'Form'      => 'Illuminate\Html\FormFacade',
         'Html'      => 'Illuminate\Html\HtmlFacade',
-        'Flash'     => 'Laracasts\Flash\Flash'
+        'Flash'     => 'Laracasts\Flash\Flash',
+        'Image' => 'Intervention\Image\Facades\Image'
     ],
 
 ];

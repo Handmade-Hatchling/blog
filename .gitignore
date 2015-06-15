@@ -19,6 +19,7 @@ _ide_helper.php
 
 composer.phar
 vendor/
+public/images/
 
 #############
 ## Node.js

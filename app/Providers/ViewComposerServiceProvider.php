@@ -1,6 +1,7 @@
 <?php namespace App\Providers;
 
 use App\Article;
+use App\Image;
 use App\Tag;
 use Illuminate\Support\ServiceProvider;
 
@@ -42,9 +43,13 @@ class ViewComposerServiceProvider extends ServiceProvider {
      */
     private function composeTags()
     {
-        view()->composer(['articles.create', 'articles.edit'], function ($view) {
+        view()->composer(['articles.create', 'articles.edit', 'images.upload', 'images.edit', 'tags.create', 'tags.edit'], function ($view) {
             $tags = Tag::lists('name', 'id');
-            $view->with('tags', $tags);
+            $images = Image::lists('title', 'id');
+            $view->with([
+                'tags' => $tags,
+                'images' => $images
+            ]);
         });
     }
 

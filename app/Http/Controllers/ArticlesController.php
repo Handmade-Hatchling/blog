@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Image as ImageModel;
 use App\Tag;
 use \Auth;
 use App\Article;
@@ -8,6 +9,7 @@ use App\Http\Requests\ArticleRequest;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Response;
+use Intervention\Image\Facades\Image;
 
 class ArticlesController extends Controller
 {
@@ -32,7 +34,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Article::latest('published_at')->published()->get();
+        $articles = Article::latest('published_at')->published()->paginate(3);
 
         return view('articles.index')->with('articles', $articles);
     }
@@ -95,6 +97,11 @@ class ArticlesController extends Controller
     {
         $article->update($request->all());
 
+        if ($request->has('image_list'))
+        {
+            $this->syncImages($article, $request->input('image_list'));
+        }
+
         $this->syncTags($article, $request->input('tag_list'));
 
         return redirect('admin/articles');
@@ -112,6 +119,17 @@ class ArticlesController extends Controller
     }
 
     /**
+     * Sync up the list of images in the database
+     *
+     * @param Article $article
+     * @param array $images
+     */
+    private function syncImages(Article $article, array $images)
+    {
+        $article->images()->sync($images);
+    }
+
+    /**
      * Save a new article
      * @param ArticleRequest $request
      * @return Article
@@ -119,6 +137,10 @@ class ArticlesController extends Controller
     private function createArticle(ArticleRequest $request)
     {
         $article = Auth::user()->articles()->create($request->all());
+
+        if ($request->has('image_list')) {
+            $this->syncImages($article, $request->input('image_list'));
+        }
 
         $this->syncTags($article, $request->input('tag_list'));
 

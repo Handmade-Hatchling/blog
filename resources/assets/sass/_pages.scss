@@ -1,0 +1,29 @@
+.articles, .about, .gallery, .contact {
+    .main {
+        padding: 3rem;
+    }
+}
+
+.about {
+    p {
+        margin-top: 1.5rem;
+        text-indent: 2rem;
+    }
+}
+
+.contact {
+    form {
+        margin-top: 1.5rem;
+    }
+
+    label {
+        display: inline-block;
+    }
+    input, textarea {
+        display: block;
+    }
+}
+
+.form__group {
+    margin-bottom: 1rem;
+}

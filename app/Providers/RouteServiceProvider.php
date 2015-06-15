@@ -28,8 +28,16 @@ class RouteServiceProvider extends ServiceProvider
             return \App\Article::published()->findOrFail($id);
         });
 
-        $router->bind('tags', function ($name) {
+        $router->bind('images', function ($id) {
+            return \App\Image::findOrFail($id);
+        });
+
+        $router->bind('tagsName', function ($name) {
             return \App\Tag::where('name', $name)->firstOrFail();
+        });
+
+        $router->bind('tagsId', function ($id) {
+            return \App\Tag::findOrFail($id);
         });
     }
 
